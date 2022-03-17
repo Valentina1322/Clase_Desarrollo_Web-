@@ -18,4 +18,4 @@ const impares=numeros.filter(numeros=> numeros%2!=0);
 console.log(impares);
 
 const planeta=datos.filter(datos=> isNaN(datos));
-console.log(planeta)
+console.log(planeta);
