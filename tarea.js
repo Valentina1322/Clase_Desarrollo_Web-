@@ -1,59 +1,55 @@
-
+// Punto 1
+ // "x" e "y" son números
+ // Suma "x" e "y" juntos y devuelve el valor
 const suma = (a,b) =>{
   
-  return a+ b;   
+  return (a+ b);   
 }
-console.log(suma(21,18))
+console.log(suma(21,18));
 
-
-//Punto 2
-// Devuelve "true" si "x" e "y" son iguales
-// De lo contrario, devuelve "false"
+// Punto 2
+ // Devuelve "true" si "x" e "y" son iguales
+ // De lo contrario, devuelve "false"
 const sonIguales = (x, y)=>{
   
-  if(x==y){
-    return true;
-    
-  }else{
-    return false;
-  }
+  return(x===y);
           
 }
 console.log(sonIguales(105,52));
-
  
 //Punto 3
-// Devuelve "true" si las dos strings tienen la misma longitud
-// De lo contrario, devuelve "false"
+ // Devuelve "true" si las dos strings tienen la misma longitud
+ // De lo contrario, devuelve "false"
 
 
 function tienenMismaLongitud(str1, str2) {
   
-  return tienenMismaLongitud;
+  return (str1.length===str2.length);
 }
-  console.log(tienenMismaLongitud(('Animo','Gatos').length));
-
+  console.log(tienenMismaLongitud('Animo','Gatos'));
 
 
 //Punto 4
-//La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
-//Si el número es positivo, devolver ---> "Es positivo"
-//Si el número es negativo, devolver ---> "Es negativo"
-//Si el número es 0, devuelve false
+ //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
+ //Si el número es positivo, devolver ---> "Es positivo"
+ //Si el número es negativo, devolver ---> "Es negativo"
+ //Si el número es 0, devuelve false
   function esPositivo(numero) {
 
-    if(numero>=0)
+    if(numero>0)
   {
-      return "Es positivo"
+      return "Es positivo";
   }else if(numero<0)
   {
-      return "Negativo"
-  }       
+      return "Negativo";
+      
+  } else{
+    return false;
+  }      
   }
-  console.log(esPositivo(22))
+  console.log(esPositivo(22));
 
   //Punto 5
-  const colors = (color)=>{
     //La función recibe un color. Devolver el string correspondiente:
     //En caso que el color recibido sea "blue", devuelve --> "This is blue"
     //En caso que el color recibido sea "red", devuelve --> "This is red"
@@ -62,155 +58,205 @@ function tienenMismaLongitud(str1, str2) {
     //Caso default: devuelve --> "Color not found"
     //Usar el statement Switch.
 
+  const colors = (color)=>{
     switch(color)
     {
         case "blue":
-            return "This is blue"
+            return "This is blue";
         break;
         case "red":
-            return "This is red"
+            return "This is red";
         break;
         case "grenn":
-             return "This is grenn"
+             return "This is green";
          break;
          case "orange":
-             return "This is orange"
+             return "This is orange";
          break;
          default:
-             return "Color not found"
+             return "Color not found";
          break;
     }
     
-  }
-  console.log(colors("yellow"))
-//-----------------------------------------------------------------------------------------------
-  const fizzBuzz = (numero)  => {
+  } 
+  console.log(colors("blue"));
+
+//Punto 6
     // Si "numero" es divisible entre 3, devuelve "fizz"
     // Si "numero" es divisible entre 5, devuelve "buzz"
     // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
     // De lo contrario, devuelve el numero
+  const fizzBuzz = (numero)  => {
+    
     if(numero%3==0 && numero%5==0)
     {
-        return "El "+numero+" fizzbuzz"
+        return "fizzbuzz";
     }else if(numero % 3==0)
     {
-        return "El "+numero+" fizz"
+        return "fizz";
     }else if(numero%5==0)
     {
-        return "El "+numero+" buzz"
+        return "buzz";
     }else
     {
-        return numero
+        return numero;
     }
     
   }
-  console.log(fizzBuzz(9))
-//-----------------------------------------------------------------------------
+  console.log(fizzBuzz(20));
+
+ // Punto 7
+  // Devuelve el primer elemento de un array
   const devolverPrimerElemento = (array) => {
-    // Devuelve el primer elemento de un array
-    // Tu código:
-    array=[1,2,3]
-    let primer =array[0]
-    return primer
+
+    
+    return array[0];
    }
    
-   console.log(devolverPrimerElemento(0))
-//------------------------------------------------------------------------------
-  const agregarItemAlFinalDelArray = (array, elemento) =>{
+   console.log(devolverPrimerElemento(['Lunes',24,'Jupiter','Jueves','Camila',12]));
+  
+ // Punto 8
     // Añade el "elemento" al final del array
     // y devuelve el array
-    // Tu código:
-    array = [1,2,3]
-    elemento=4
-    array.push=[elemento]
-    return array
+  const agregarItemAlFinalDelArray = (array, elemento) =>{
+
+    array.push(elemento);
+    return array;
     
   }
-  console.log(agregarItemAlFinalDelArray(0))
-  //-------------------------------------------------------------------------------------
+  console.log(agregarItemAlFinalDelArray(['Lunes',24,'Jupiter','Jueves','Camila',12],'Urano'));
 
-  const nuevoUsuario = (nombre, email, password) => {
+//Punto 9
     // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
     // Devuelve el objeto
-    // Tu código:
-    let nombre1="juan"
-    let email1="abc@gmail.com"
-    let password2="abc123"
-    let datos="Nombre: "+nombre+" Email: "+email+" Password: "+password
-    if(nombre1===nombre && email1===email && password2===password)
-    {
-        return datos
-    }else
-    {
-     return "Los datos del usuraio no coinciden"   
-    }
-    }
-    console.log(nuevoUsuario("juan","abc@gmail.com","abc123"))
+    var usuario={
+      nombre:"",
+      email:"",
+      password:"",    
+ }
+
+ const nuevoUsuario = (nombre, email, password) => {
+     
+     if(usuario.nombre=="" && usuario.email=="" && usuario.password=="")
+     {
+       usuario.nombre=nombre;
+       usuario.email=email;
+       usuario.password= password;
+ 
+       return usuario;
+ 
+     }
+     {
+      return "Los datos del usuraio que ingreso no coinciden" ;  
+     }
+     }
+     console.log(nuevoUsuario("Maria","maria022@gmail.com","123maria"))
     
 
+//Punto 10
+    // Comprueba si el "password" enviado coincide con la propiedad "password" del objeto "usuario"
+    // Devuelve "true" si coinciden
+    // De lo contrario, devuelve "false"
+    var usuarioExistente={
+      nombre:"Isabella",
+      password:"856421",    
+ }
   const verificarPassword = (usuario, password) => {
-    let usuario1="Maria"
-    let password2=12347
+    
+    return (usuarioExistente.nombre==usuario&&usuarioExistente.password===password);
 
-    if(usuario1==usuario&&password2===password){
-      return true
-    }else{
-      return false
-    }  
   }
 
   console.log(verificarPassword("Maria",12347));
 
-  const actualizarPassword =(usuario, nuevaPassword) => {
+//Punto 11
     // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
     // Devuelve el objeto
-    // Tu código:
+    var usuarioModificarPass={
+      nombre:"Julian",
+      password:3456,    
+ }
 
-    let usuario1="Maria"
-    let password2= 12347
-
-    if(usuario1==usuario&&password2===12347){
-
-    }
+  const actualizarPassword =(usuario, nuevaPassword) => {
     
+    if(usuarioModificarPass.nombre==usuario){
+      usuarioModificarPass.password=nuevaPassword;
+    }    
+    return usuarioModificarPass;
   }
+   console.log(actualizarPassword("Julian",89654));
 
-  const agregarAmigo = (usuario, nuevoAmigo) => {
+//Punto 12
     // "usuario" tiene una propiedad llamada "amigos" que es un array
     // Agrega "nuevoAmigo" al final de ese array
     // Devuelve el objeto "usuario"
-    // // Tu código:
-    // var user = {
-    //   amigos: ['Pedro', 'Sebastian']
-    // }
-   
-  }
 
-  const pasarUsuarioAPremium = usuarios => {
+    var user = {
+      amigos: ['Pedro', 'Sebastian']
+    }
+
+  const agregarAmigo = (usuario, nuevoAmigo) => {
+    
+
+    user.amigos.push(nuevoAmigo);
+    return user;
+  }
+  console.log(agregarAmigo(['Pedro', 'Sebastian'], 'Ana'));
+
+//Punto 13
     // "usuarios" es un array de objetos "usuario"
     // Cada objeto "usuario" tiene la propiedad "esPremium"
     // Define cada propiedad "esPremium" de cada objeto como "true"
     // Devuelve el array de usuarios
-    // Tu código:
-    
-  }
+    var usuariosB=[{nombre:'Andres',esPremium:true},{nombre:'Sara', esPremium:true},
+    {nombre:'Juliana', esPremium:false},{nombre:'Felipe',esPremium:false},{nombre:'Sebastian', esPremium:false}];
 
-  const sumarLikesDeUsuario = usuario => {
+  const pasarUsuarioAPremium =(usuarios) => {
+    for(i=0;i<usuarios.length;i++){
+      usuarios[i].esPremium=true;
+    }
+    return usuarios;
+  }
+  console.log(pasarUsuarioAPremium(usuariosB))
+//Punto 14
     // "usuario" tiene una propiedad llamada "posts" que es un array
     // "posts" es un array de objetos "post"
     // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
     // Suma todos los likes de todos los objetos "post"
     // Devuelve la suma
-    // Tu código:
-    // let usuario = {
-    //   posts: [{
-    //     likes: 4
-    //   }]
-    // };
+    let usuario = {
+      posts: [{
+        likes: 4
+      }],
 
+      posts: [{
+        likes: 6
+      }],
+
+      posts: [{
+        likes: 10
+      }],
+
+      posts: [{
+        likes: 12
+      }] 
+    };
+
+  const sumarLikesDeUsuario = usuario => {
+
+    let suma=0;
+
+    for(i=0;i<usuario.length;i++){
+      for(j=0;j<usuario[i].length;j++){
+      suma=usuario[i].likes;
+      }
+    }
+    return suma;
+    
   }
+  console.log(sumarLikesDeUsuario(usuario))
 
-  // ---------------------------------------------------------------------------//
+ //Punto 15
   //Crea el constructor de la clase "Persona"
   //Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
   //Debe tener un método llamado "detalle" que nos devuelve un objeto con 
@@ -222,44 +268,82 @@ function tienenMismaLongitud(str1, str2) {
     //   Domicilio: 'Saavedra 123'
     //  }
 
-class Persona {
-    constructor(/*Escribir los argumentos que recibe el constructor*/) {
-      // Crea el constructor:
-
-    }
-}
-
-const crearInstanciaPersona = (nombre, apellido, edad, dir)=>{
+    class Persona {
+      constructor(nombre, apellido, edad, domicilio) {
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.edad=edad;
+        this.domicilio=domicilio;
+  
+      }
+        get detalle(){
+         let datos={
+           nombre:this.nombre,
+           apellido:this.apellido,
+           edad:this.edad,
+           domicilio:this.domicilio
+         } 
+        return datos  
+      }
+  }
+  const persona1=new Persona('Ana','Perez',28,'calle 45')
+  console.log(persona1.detalle)
+  
+//Punto 16
     //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
     //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
     //Devolver la nueva persona creada
-    
+const crearInstanciaPersona = (nombre, apellido, edad, dir)=>{
+    const persona2=new Persona(nombre,apellido,edad,dir)
+    return persona2  
 }
+console.log(crearInstanciaPersona("Juan", "Perez", 22, "Saavedra 123").detalle)
 
-const sumarArray = (numeros, cb) =>{
+// Punto 17
     // Suma todos los números enteros (int/integers) de un array ("numeros")
     // Pasa el resultado a `cb`
     // No es necesario devolver nada
+const sumarArray = (numeros, cb) =>{
+   let suma
+   for(i=0;i<numeros.length;i++){
+     suma=suma+numeros[i];
+   }
+   cb=suma  
 }
+console.log(sumarArray([5,10,65,2],0));
 
-const copiarEach = (array, cb) =>{
+//Punto 18
     // Itera sobre la matriz "array" y pasa los valores a cb uno por uno
     // Pista: Estarás invocando a `cb` varias veces (una por cada valor en el array)
     // no tienes que devolver nada
+const copiarEach = (array, cb) =>{
     
-  }
+    
+}
 
-  const operacionMatematica =(n1, n2, cb) =>{
+//Punto 19
     //Vamos a recibir una función que realiza una operación matemática junto con dos números.
     //Devolver la función pasándole como argumentos los números recibidos.
-    //Tu código:
-  }
+    function suma(numUno, numDos) {
+      return numUno+numDos;
+    }
 
-  function filter(array) {
+    const operacionMatematica =(n1, n2, cb) =>{
+    return suma(n1,n2);    
+  }
+  console.log(operacionMatematica(3,7,0))
+
+//Punto 20
     //Filtrar todos los elementos del array que comiencen con la letra "a".
     //Devolver un nuevo array con los elementos que cumplen la condición
-    //Tu código:
+    function filter(array) {
+    const nuevoArray=array.filter.
+    
+    return nuevoArray;
   } 
+
+  
+  console.log(filter(['Azucar','Dormir','Almohada','Alma','Soñar','Celular','Estudiar']));
 
 
   /**
@@ -289,4 +373,5 @@ module.exports = {
     operacionMatematica,
     filter
 }
+
 
