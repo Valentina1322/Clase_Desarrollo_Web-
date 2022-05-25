@@ -5,7 +5,7 @@ const suma = (a,b) =>{
   
   return (a+ b);   
 }
-console.log(suma(21,18));
+
 
 // Punto 2
  // Devuelve "true" si "x" e "y" son iguales
@@ -15,7 +15,7 @@ const sonIguales = (x, y)=>{
   return(x===y);
           
 }
-console.log(sonIguales(105,52));
+
  
 //Punto 3
  // Devuelve "true" si las dos strings tienen la misma longitud
@@ -26,8 +26,7 @@ function tienenMismaLongitud(str1, str2) {
   
   return (str1.length===str2.length);
 }
-  console.log(tienenMismaLongitud('Animo','Gatos'));
-
+ 
 
 //Punto 4
  //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
@@ -47,7 +46,7 @@ function tienenMismaLongitud(str1, str2) {
     return false;
   }      
   }
-  console.log(esPositivo(22));
+
 
   //Punto 5
     //La función recibe un color. Devolver el string correspondiente:
@@ -79,7 +78,7 @@ function tienenMismaLongitud(str1, str2) {
     }
     
   } 
-  console.log(colors("blue"));
+  
 
 //Punto 6
     // Si "numero" es divisible entre 3, devuelve "fizz"
@@ -103,7 +102,7 @@ function tienenMismaLongitud(str1, str2) {
     }
     
   }
-  console.log(fizzBuzz(20));
+ 
 
  // Punto 7
   // Devuelve el primer elemento de un array
@@ -113,7 +112,7 @@ function tienenMismaLongitud(str1, str2) {
     return array[0];
    }
    
-   console.log(devolverPrimerElemento(['Lunes',24,'Jupiter','Jueves','Camila',12]));
+  
   
  // Punto 8
     // Añade el "elemento" al final del array
@@ -124,7 +123,7 @@ function tienenMismaLongitud(str1, str2) {
     return array;
     
   }
-  console.log(agregarItemAlFinalDelArray(['Lunes',24,'Jupiter','Jueves','Camila',12],'Urano'));
+  
 
 //Punto 9
     // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
@@ -150,7 +149,7 @@ function tienenMismaLongitud(str1, str2) {
       return "Los datos del usuraio que ingreso no coinciden" ;  
      }
      }
-     console.log(nuevoUsuario("Maria","maria022@gmail.com","123maria"))
+     
     
 
 //Punto 10
@@ -167,8 +166,7 @@ function tienenMismaLongitud(str1, str2) {
 
   }
 
-  console.log(verificarPassword("Maria",12347));
-
+ 
 //Punto 11
     // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
     // Devuelve el objeto
@@ -184,7 +182,7 @@ function tienenMismaLongitud(str1, str2) {
     }    
     return usuarioModificarPass;
   }
-   console.log(actualizarPassword("Julian",89654));
+   
 
 //Punto 12
     // "usuario" tiene una propiedad llamada "amigos" que es un array
@@ -201,7 +199,7 @@ function tienenMismaLongitud(str1, str2) {
     user.amigos.push(nuevoAmigo);
     return user;
   }
-  console.log(agregarAmigo(['Pedro', 'Sebastian'], 'Ana'));
+  
 
 //Punto 13
     // "usuarios" es un array de objetos "usuario"
@@ -217,7 +215,8 @@ function tienenMismaLongitud(str1, str2) {
     }
     return usuarios;
   }
-  console.log(pasarUsuarioAPremium(usuariosB))
+  
+  
 //Punto 14
     // "usuario" tiene una propiedad llamada "posts" que es un array
     // "posts" es un array de objetos "post"
@@ -254,7 +253,7 @@ function tienenMismaLongitud(str1, str2) {
     return suma;
     
   }
-  console.log(sumarLikesDeUsuario(usuario))
+  
 
  //Punto 15
   //Crea el constructor de la clase "Persona"
@@ -287,7 +286,7 @@ function tienenMismaLongitud(str1, str2) {
       }
   }
   const persona1=new Persona('Ana','Perez',28,'calle 45')
-  console.log(persona1.detalle)
+  
   
 //Punto 16
     //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
@@ -297,7 +296,7 @@ const crearInstanciaPersona = (nombre, apellido, edad, dir)=>{
     const persona2=new Persona(nombre,apellido,edad,dir)
     return persona2  
 }
-console.log(crearInstanciaPersona("Juan", "Perez", 22, "Saavedra 123").detalle)
+
 
 // Punto 17
     // Suma todos los números enteros (int/integers) de un array ("numeros")
@@ -310,7 +309,7 @@ const sumarArray = (numeros, cb) =>{
    }
    cb=suma  
 }
-console.log(sumarArray([5,10,65,2],0));
+
 
 //Punto 18
     // Itera sobre la matriz "array" y pasa los valores a cb uno por uno
@@ -331,7 +330,7 @@ const copiarEach = (array, cb) =>{
     const operacionMatematica =(n1, n2, cb) =>{
     return suma(n1,n2);    
   }
-  console.log(operacionMatematica(3,7,0))
+  
 
 //Punto 20
     //Filtrar todos los elementos del array que comiencen con la letra "a".
@@ -343,7 +342,7 @@ const copiarEach = (array, cb) =>{
   } 
 
   
-  console.log(filter(['Azucar','Dormir','Almohada','Alma','Soñar','Celular','Estudiar']));
+
 
 
   /**
